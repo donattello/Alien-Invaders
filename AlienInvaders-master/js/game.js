@@ -3,7 +3,7 @@ var AlienFlock = function AlienFlock() {
   this.invulnrable = true;
   this.dx = 10; this.dy = 0;
   this.hit = 1; this.lastHit = 0;
-  this.speed = 100; //speed of aliens
+  this.speed = 10; //speed of aliens
 
   this.draw = function() {};
 
@@ -16,7 +16,7 @@ var AlienFlock = function AlienFlock() {
     }
   }
 
-  this.step = function(dt) { 
+  this.step = function (dt) { 
     if(this.hit && this.hit != this.lastHit) {
       this.lastHit = this.hit;
       this.dy = this.speed;
@@ -104,14 +104,21 @@ Player.prototype.die = function() {
   Game.callbacks['die']();
 }
 
-//speed of movement of the player
+//speed and movement of the player
 Player.prototype.step = function(dt) {
-  if(Game.keys['left']) { this.x -= 100 * dt; } //speed of left key
-  if(Game.keys['right']) { this.x += 100 * dt; } //speed of right key
+  if(Game.keys['left']) { this.x -= 100 * dt; } //speed and movement left key
+  if(Game.keys['right']) { this.x += 100 * dt; } //speed and movement right key
 
   if(this.x < 0) this.x = 0;
   if(this.x > Game.width-this.w) this.x = Game.width-this.w;
 
+  if(Game.keys['up']) { this.y -= 100 * dt; } //speed movement up key
+  if(Game.keys['down']) { this.y += 100 * dt; } //speed movement down key
+
+  if(this.y < 0) this.y = 0;
+  if(this.y > Game.height-this.h) this.x = Game.height-this.h;
+
+    
   this.reloading--;
 
 //reloading and number of missiles able to fire, fire audio
