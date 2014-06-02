@@ -1,7 +1,7 @@
 
 // assigning the keys to the keyboard.
 var Game = new function() {                                                                  
-  var KEY_CODES = { 37:'left', 38:'up', 39:'right', 40:'down', 32 :'fire' };
+  var KEY_CODES = { 37:'left', 38:'up', 39:'right', 40:'down ', 32 :'fire', 13: 'start' };
   this.keys = {};
 
 // initializing the game, calling all the elements of the game (canvas, level, sprites and start).
@@ -57,7 +57,7 @@ var Sprites = new function() {
 //initializing the welcome screen
 var GameScreen = function GameScreen(text,text2,callback) {
   this.step = function(dt) {
-    if(Game.keys['fire'] && callback) callback();
+    if(Game.keys['start'] && callback) callback();
   };
 
 //writing the welcome screen
