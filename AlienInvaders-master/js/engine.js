@@ -1,7 +1,7 @@
 
 // assigning the keys to the keyboard.
 var Game = new function() {                                                                  
-  var KEY_CODES = { 37:'left', 38:'left', 39:'right', 40:'right', 32 :'fire' };
+  var KEY_CODES = { 37:'left', 38:'up', 39:'right', 40:'down', 32 :'fire' };
   this.keys = {};
 
 // initializing the game, calling all the elements of the game (canvas, level, sprites and start).
