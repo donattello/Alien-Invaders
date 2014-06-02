@@ -9,17 +9,25 @@
   <script src='js/level.js'></script>
 
   <style>
-      #gameboard { background-color:#00ff00;}
+      body{margin: 0; padding: 0;}
+      #background{ width: auto; height: auto; background-image: url(images/brickWall2.png); margin: 0; padding: 0;}
+      #cell { margin-left: auto; margin-right: auto; width: 740px; height: 120px; padding:0;}
+      #gameboard { background-color:#00ff00; margin:0; padding:0;}
       #game-wrapper { margin:auto; width: 500px; }
+      
       /*img {width: 100%; height: 100%;}*/
-     body { background-image: url(images/brickWall.png); background-size: auto;}
+    /* body { background-image: url(images/brickWall2.png); background-size: 1600px; margin:0; padding:0;}
   </style>
 </head>
 <body>
-    
+    <div id='background'>
+        
+    <div id='cell'>
+        <img src="images/cell2.png">
+        </div>
   <div id='game-wrapper'>
     <canvas id='gameboard' width='500' height='500'></canvas>
-      
+      </div>
   </div>
 </body>
 </html>
