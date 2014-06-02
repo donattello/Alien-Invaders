@@ -45,7 +45,7 @@
 
 //starting the game, being promped to press relevant key.
   function startGame() {
-    var screen = new GameScreen("Chase the bandits","press space to start",
+    var screen = new GameScreen("Chase the bandits","press enter to start",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
@@ -55,7 +55,7 @@
 
 //end of the game, prompting us to press relevant key to restart.
   function endGame() {
-    var screen = new GameScreen("Game Over","(press space to restart)",
+    var screen = new GameScreen("Game Over","(press enter to restart)",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
@@ -65,7 +65,7 @@
 
 //winning screen, prompting us to press relevent key to restart.
   function winGame() {
-    var screen = new GameScreen("You Win!","(press space to restart)",
+    var screen = new GameScreen("You Win!","(press enter to restart)",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
