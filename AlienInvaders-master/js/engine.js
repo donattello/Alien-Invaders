@@ -63,7 +63,7 @@ var GameScreen = function GameScreen(text,text2,callback) {
 //writing the welcome screen
   this.render = function(canvas) {
     canvas.clearRect(0,0,Game.width,Game.height);
-    canvas.font = "bold 40px helvetica";
+    canvas.font = "bold 40px Armalite Rifle";
     var measure = canvas.measureText(text);  
     canvas.fillStyle = "#black";
     canvas.fillText(text,Game.width/2 - measure.width/2,Game.height/2);
