@@ -116,7 +116,7 @@ Player.prototype.step = function(dt) {
   if(Game.keys['down']) { this.y += 100 * dt; } //speed movement down key
 
   if(this.y < 0) this.y = 0;
-  if(this.y > Game.height-this.h) this.x = Game.height-this.h;
+  if(this.y > Game.height-this.h) this.y = Game.height-this.h;
 
     
   this.reloading--;
