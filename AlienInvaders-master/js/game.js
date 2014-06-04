@@ -1,4 +1,4 @@
-
+var score=0;
 var AlienFlock = function AlienFlock() {
   this.invulnrable = true;
   this.dx = 10; this.dy = 0;
@@ -61,6 +61,8 @@ Alien.prototype.die = function() {
   GameAudio.play('die');
   this.flock.speed += 1; //speeding up
   this.board.remove(this);
+    score = score +1;
+    document.getElementById('score').innerHTML = "score: "+score;
 }
 
 // Aliens moving on the axis X and when hit the end move one field down on axis Y
