@@ -45,7 +45,7 @@
 
 //starting the game, being promped to press relevant key.
   function startGame() {
-    var screen = new GameScreen("Chase the bandits","press enter to start",
+    var screen = new GameScreen("Prison Break","press enter to start",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
