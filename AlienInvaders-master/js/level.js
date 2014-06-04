@@ -58,6 +58,8 @@
     var screen = new GameScreen("Game Over","(press enter to restart)",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
+                                     score = 0;
+                                     document.getElementById('score').innerHTML = " : " + score;
                                  });
     Game.loadBoard(screen);
   }
@@ -68,6 +70,8 @@
     var screen = new GameScreen("You Win!","(press enter to restart)",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
+                                     score = 0;
+                                     document.getElementById('score').innerHTML = " : " + score;
                                  });
     Game.loadBoard(screen);
   }
